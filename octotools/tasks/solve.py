@@ -104,7 +104,10 @@ class Solver:
         problem = self.benchmark_data[index]
         # use 'query' by default for LLM inputs
         question = problem.get("query") if "query" in problem else problem["question"]
-        image_path = problem['image']
+        
+        # Define image_path with a default value if 'image' key is missing
+        image_path = problem.get('image', None)  # Default to None if 'image' key is not present
+        
         print(f"image_path: {image_path}")  
         pid = problem['pid']
         answer = problem['answer']
@@ -216,6 +219,16 @@ class Solver:
                     # Execute the tool command
                     result = self.executor.execute_tool_command(tool_name, command)
                     print("!!! type of result: ", type(result))
+
+                    # Log the result before processing
+                    print("Result from tool command:", result)
+
+                    # Check if result is in expected format
+                    if isinstance(result, dict):
+                        # Log the response structure
+                        print("Response structure:", result)
+                    else:
+                        print("Unexpected result format:", type(result))
 
                     result = make_json_serializable_truncated(result) # Convert to JSON serializable format
 

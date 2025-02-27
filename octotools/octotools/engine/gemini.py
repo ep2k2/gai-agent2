@@ -29,13 +29,13 @@ class ChatGemini(EngineLM, CachedEngine):
 
     def __init__(
         self,
-        model_string="gemini-pro",
+        model_string="gemini-flash-2.0",
         system_prompt=DEFAULT_SYSTEM_PROMPT,
         is_multimodal: bool=False,
         enable_cache: bool=True,
         **kwargs):
         """
-        :param model_string: gemini-pro or gemini-pro-vision
+        :param model_string: gemini-flash-2.0
         :param system_prompt:
         :param is_multimodal:
         """

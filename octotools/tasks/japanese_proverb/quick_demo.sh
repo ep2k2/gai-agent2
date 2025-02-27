@@ -5,7 +5,7 @@ PROJECT_DIR="./"
 
 LABEL="quick_demo"
 
-TASK="gameof24"
+TASK="japanese_proverb"
 DATA_FILE="$TASK/data/data.json"
 LOG_DIR="$TASK/logs/$LABEL"
 OUT_DIR="$TASK/results/$LABEL"
@@ -13,7 +13,7 @@ CACHE_DIR="$TASK/cache"
 
 LLM="gpt-4o"
 
-ENABLED_TOOLS="Python_Code_Generator_Tool,Generalist_Solution_Generator_Tool"
+ENABLED_TOOLS="Japanese_Tokenizer_Tool,Generalist_Solution_Generator_Tool"
 
 INDEX=0
 
