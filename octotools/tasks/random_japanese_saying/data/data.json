@@ -1,0 +1,7 @@
+[
+  {
+    "pid": "random_japanese_saying",
+    "query": "Randomly choose a culturally distinctive Japanese saying, proverb (kotowaza), joke or tongue twister. Perform a detailed morphological analysis by breaking it into individual words. For each word, provide:\n- All possible readings (e.g., on'yomi, kun'yomi, irregular readings if applicable).\n- A full morphological breakdown using standard Japanese linguistic categories (e.g., part of speech like '名詞' (noun), subtype like '普通名詞' (common noun), and further detail like '一般' (general)).\n- The word's meaning in English.\n- The JLPT level (N1–N5, or 'N/A' if not officially listed, with an estimated level based on complexity or frequency).\nStructure the response as a JSON object where each word is an entry. Include the full proverb in Japanese and its overall English translation at the top. Make sure you return the output in this required JSON structure:\n{\n  \"proverb\": \"Japanese text\",\n  \"translation\": \"English meaning\",\n  \"vocabulary\": [\n    {\n      \"word\": \"word in Japanese\",\n      \"readings\": [\"reading1\", \"reading2\"],\n      \"morphology\": [\"名詞\", \"普通名詞\", \"一般\"],\n      \"meaning\": \"English definition\",\n      \"jlpt\": \"N3\"\n    }\n  ]\n}",
+    "answer": null
+  }
+]

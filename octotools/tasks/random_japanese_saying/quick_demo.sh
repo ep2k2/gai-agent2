@@ -5,13 +5,13 @@ PROJECT_DIR="./"
 
 LABEL="quick_demo"
 
-TASK="japanese_proverb"
+TASK="random_japanese_saying"
 DATA_FILE="$TASK/data/data.json"
 LOG_DIR="$TASK/logs/$LABEL"
 OUT_DIR="$TASK/results/$LABEL"
 CACHE_DIR="$TASK/cache"
 
-LLM="gpt-4o"
+LLM="gpt-4o-mini"
 
 ENABLED_TOOLS="Japanese_Tokenizer_Tool,Generalist_Solution_Generator_Tool"
 

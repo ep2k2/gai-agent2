@@ -1,7 +1,0 @@
-[
-  {
-    "pid": "proverb_1",
-    "query": "Please choose a random Japanese proverb and analyze its vocabulary. For each word, provide: the word in kanji (if applicable), reading in hiragana, meaning in English, and JLPT level. Structure the response as JSON.",
-    "answer": null
-  }
-]
