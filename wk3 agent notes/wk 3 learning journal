@@ -1,0 +1,32 @@
+# Experiment, spec and implementation
+- see AGENT_EXP.MD
+
+# Sample output - see
+- output - octotool provided gameof24 example run.md
+- output 2 - my japanese_proverb task - did not use my japanese_tokeniser tool copy.md
+- output 3 - success - changed prompt and quite probably leading the witness.md
+
+# Challenges
+
+## technical
+- through a combination of my limited experience, deciding to experiment with uv rather than following the repo instructions -- PLUS some insufficiently overseen AI assistance(!) -- I ended up with a very confused state despite things working initially (I suspect this was likely part-venv and part WSL in nature - lots of 'external environment' warnings and relative path issues)
+- anyway, in the end I created a new repo to clone the Octotools framework again and start clean, tested connectivity etc. as before and then re-introduce my code 'extensions' to the framework.
+- Git history will be a mess (but succeeded in the end!)
+
+# Learnings
+- I was disappointed when initial runs showed the LLM not choosing to use my newly created tool 'card' (Octotools terminology) for Japanese language morphological analysis
+- however I also noticed that tests run against the framework provided code also did the same (GPT4o/Gameof24/Python_code_generator)
+- amending the prompt did trigger use by bearing clearer needed a full classication of input and not just top-level parts of speech
+- interesting that the LLM itself identified that checking the JLPT Nx level could be a consideration
+- likewise a post-processing step or 'structured output' on supported model GPT, Gemini etc... but did not seem to be needed in this example
+
+# Wider learning/thoughts
+- if tool choice is predetermined/enforced then this is workflow not agentic
+- as foundation/frontier models continue to improve in capability, they can handle many tasks directly without needing to tool-use even if these are made available
+- not all problems warrant GenAI as ML/regression models or straight code will often cover better
+-- e.g. to perform japanese tokenisation and basic grammatical classification choose a webservice call, but could have used open source code options or worked more on prompt/guidance direct to LLM 
+- also seems clear that not all GenAI solutions need agentic approaches as harnessing LLMs inside a workflow orientated approach will cover many 'production' use-cases where repeatability over novelty is key
+- what size/capability of model is needed to effectively make sure of tools in an agentic fashion?
+- strong candidates for agent tools / MCP servers would seem to be
+-- a) specialist processing by other local or cloud services based on local compute/GPU, access to data etc. vs LLM inference costs
+-- b) need to retain close control of data for privacy or regulatory reasons
