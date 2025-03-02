@@ -15,7 +15,7 @@
 
 # Learnings
 - I was disappointed when initial runs showed the LLM not choosing to use my newly created tool 'card' (Octotools terminology) for Japanese language morphological analysis
-- however I also noticed that tests run against the framework provided code also did the same (GPT4o/Gameof24/Python_code_generator)
+- however I then also noticed that tests run against the framework provided code also did the same (GPT4o/Gameof24/Python_code_generator)!
 - amending the prompt did trigger use by bearing clearer needed a full classication of input and not just top-level parts of speech
 - interesting that the LLM itself identified that checking the JLPT Nx level could be a consideration
 - likewise a post-processing step or 'structured output' on supported model GPT, Gemini etc... but did not seem to be needed in this example
@@ -24,9 +24,10 @@
 - if tool choice is predetermined/enforced then this is workflow not agentic
 - as foundation/frontier models continue to improve in capability, they can handle many tasks directly without needing to tool-use even if these are made available
 - not all problems warrant GenAI as ML/regression models or straight code will often cover better
--- e.g. to perform japanese tokenisation and basic grammatical classification choose a webservice call, but could have used open source code options or worked more on prompt/guidance direct to LLM 
-- also seems clear that not all GenAI solutions need agentic approaches as harnessing LLMs inside a workflow orientated approach will cover many 'production' use-cases where repeatability over novelty is key
-- what size/capability of model is needed to effectively make sure of tools in an agentic fashion?
+-- e.g. to perform japanese tokenisation and basic grammatical classification choose a webservice call, but could have used open source code options or worked more on prompt/guidance direct to LLM
+-- not scientific but interesting that looking at run 2 and 3 the non-tool using run took more than two and a half times as long, despite using an online web-service for the grammar analysis, and local provision would be faster again no doubt.
+- also seems clear that not all GenAI solutions need agentic approaches as harnessing LLMs inside a workflow orientated approach will cover many 'production' use-cases where repeatability over agency is key
+- unclear what size/capability of model is needed to effectively make sure of tools in an agentic fashion but if agentic tool-calling is needed expect the 'judgement' to be key for getting value
 - strong candidates for agent tools / MCP servers would seem to be
 -- a) specialist processing by other local or cloud services based on local compute/GPU, access to data etc. vs LLM inference costs
 -- b) need to retain close control of data for privacy or regulatory reasons
